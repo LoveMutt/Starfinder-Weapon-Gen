@@ -7,7 +7,7 @@ It's dirty and I'm not ashamed. But it works quite well and can add some add som
 
 	WeaponGen.py [OPTIONS]
 	optional arguments:
-		-h,--help					show help
+		-h,--help				show help
 		-t,--tier {1,2,3,4,5}			choose weapon tier. 1,2,3,4,5 corresponds to levels 1-4,5-8,9-12,13-16,17-20
 		-a,--armtype {heavy,smallarm,longarm}	choose weapon type
 
