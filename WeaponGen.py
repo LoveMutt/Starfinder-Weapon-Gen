@@ -41,6 +41,8 @@ def smallArm (level):
     
     randDamageType = random.choice(damageType)
     gunType = random.choice(smallSubType)
+    printLevel = level
+    if gunType == 'FX Hand-Cannon' and level != '20': level = str(int(level)+1)
     damage = random.choice(smallArmDamageCurve[level]) + damageTypeAbbrv[randDamageType]
     
     gunName = gunType.replace('FX',randDamageType).replace("Projectile ","")
@@ -105,7 +107,7 @@ def smallArm (level):
         
         
     
-    print "Level " + level + " " + gunName
+    print "Level " + printLevel + " " + gunName
     print ""
 
     print "Damage:      " + damage
@@ -152,8 +154,8 @@ def longarm (level):
         
     #AMMO
     if gunType == 'FX Rifle':
-        semiAuto1= [random.choice(['20','40','80','100']) + ' charges',random.choice(['1','2','4'])]
-        semiAuto2= [random.choice(['6','12','18','24',]) + ' rounds','1']
+        semiAuto1= [random.choice(['20','40','80','100']) + ' charges',random.choice(['1','2','4','10'])]
+        semiAuto2= [random.choice(['6','12','18']) + ' rounds','1']
         ammo=random.choice([semiAuto1,semiAuto2])
         special.append(random.choice(['Boost '+ random.choice(boostDice[tier-1]),'Penetrating','Quick Reload','-']))
         Bulk = random.choice(['1','1','2'])
@@ -163,7 +165,7 @@ def longarm (level):
         ammo=random.choice([semiAuto1,semiAuto2])
         special.append(random.choice(['Automatic','Boost '+ random.choice(boostDice[tier-1]),'Stun','-']))
         rangeo = rangeo - 30
-        if rangeo < 30: rangeo = 30
+        if rangeo < 40: rangeo = 40
         Bulk = 'L'
     elif gunType == 'FX Scattergun':
         special.append('Blast')
