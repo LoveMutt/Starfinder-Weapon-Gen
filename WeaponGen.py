@@ -108,8 +108,8 @@ def smallArm (level):
         
     
     print "Level " + printLevel + " " + gunName
-    print ""
-
+    print "Small arm - one-handed"
+    print""
     print "Damage:      " + damage
     print "Range:       " + str(rangeo) + " ft."
    
@@ -206,8 +206,8 @@ def longarm (level):
         
     
     print "Level " + printLevel + " " + gunName
+    print "Longarm - two-handed"
     print ""
-
     print "Damage:      " + damage
     print "Range:       " + str(rangeo) + " ft."
    
@@ -308,8 +308,9 @@ def heavy (level):
         critical = critical + ' ' + str(num) +'d' + str(die)
         
     print "Level " + printLevel + " " + gunName
+    print "Heavy - two-handed"
     print ""
-
+    
     print "Damage:      " + damage
     print "Range:       " + str(rangeo) + " ft."
    
