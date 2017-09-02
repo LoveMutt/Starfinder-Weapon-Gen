@@ -3,18 +3,23 @@ This script will generate a randomised small arm, longarm, or heavy weapon with 
 
 It's dirty and I'm not ashamed. But it works quite well and can add some add some fun items to your game while keeping it balanced.
 
-Usage: WeaponGen.py [OPTIONS]
+Usage: 
+'''
+WeaponGen.py [OPTIONS]
 optional arguments:
 	-h,--help								show help
 	-t,--tier {1,2,3,4,5}					choose weapon tier. 1,2,3,4,5 corresponds to levels 1-4,5-8,9-12,13-16,17-20
 	-a,--armtype {heavy,smallarm,longarm}	choose weapon type
+'''
 	
 if you run WeaponGen.py with no arguments it will create a completely random weapon from any type or tier.
 example use cases:
+
 I want to generate some loot for a level 2 party. I would run [ WeaponGen.py -t 1 ] to generate a level 1-4 weapon of a random type.
+
 My shop wants a new longarm for a level 14 character. I would run [ WeaponGen.py -t 4 -a longarm ] to get a longarm in the right tier
 
-Some example outputs:
+###Example outputs:
 
 	Level 4 Laser Revolver
 
