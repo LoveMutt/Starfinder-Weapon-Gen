@@ -13,7 +13,8 @@ It's dirty and I'm not ashamed. But it works quite well and can add some add som
 
 	
 if you run WeaponGen.py with no arguments it will create a completely random weapon from any type or tier.
-example use cases:
+
+### Example use cases:
 
 I want to generate some loot for a level 2 party. I would run [ WeaponGen.py -t 1 ] to generate a level 1-4 weapon of a random type.
 
