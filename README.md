@@ -3,12 +3,12 @@ This script will generate a randomised small arm, longarm, or heavy weapon with 
 
 It's dirty and I'm not ashamed. But it works quite well and can add some add some fun items to your game while keeping it balanced.
 
-Usage: 
+### Usage: 
 
 	WeaponGen.py [OPTIONS]
 	optional arguments:
-		-h,--help								show help
-		-t,--tier {1,2,3,4,5}					choose weapon tier. 1,2,3,4,5 corresponds to levels 1-4,5-8,9-12,13-16,17-20
+		-h,--help					show help
+		-t,--tier {1,2,3,4,5}			choose weapon tier. 1,2,3,4,5 corresponds to levels 1-4,5-8,9-12,13-16,17-20
 		-a,--armtype {heavy,smallarm,longarm}	choose weapon type
 
 	
