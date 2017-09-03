@@ -1,5 +1,5 @@
 # Starfinder-Weapon-Gen
-This script will generate a randomised small arm, longarm, or heavy weapon with damage curves matched as closely as possible to the core rulebook weapon entries.
+This script will generate a randomised small arm, longarm, heavy weapon, or sniper weapon with damage curves matched as closely as possible to the core rulebook weapon entries.
 
 It's dirty and I'm not ashamed. But it works quite well and can add some add some fun items to your game while keeping it balanced.
 
@@ -7,9 +7,9 @@ It's dirty and I'm not ashamed. But it works quite well and can add some add som
 
 	WeaponGen.py [OPTIONS]
 	optional arguments:
-		-h,--help				show help
-		-t,--tier {1,2,3,4,5}			choose weapon tier. 1,2,3,4,5 corresponds to levels 1-4,5-8,9-12,13-16,17-20
-		-a,--armtype {heavy,smallarm,longarm}	choose weapon type
+		-h,--help					show help
+		-t,--tier {1,2,3,4,5}				choose weapon tier. 1,2,3,4,5 corresponds to levels 1-4,5-8,9-12,13-16,17-20
+		-a,--armtype {heavy,smallarm,longarm,sniper}	choose weapon type
 
 	
 if you run WeaponGen.py with no arguments it will create a completely random weapon from any type or tier.
