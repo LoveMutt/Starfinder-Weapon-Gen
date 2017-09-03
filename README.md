@@ -9,8 +9,8 @@ It's dirty and I'm not ashamed. But it works quite well and can add some add som
 	optional arguments:
 		-a,--armtype {heavy,smallarm,longarm,sniper}	choose weapon type
 		-h,--help					show help
-		-t,--tier {1-5}				choose weapon tier. 1,2,3,4,5 corresponds to levels 1-4,5-8,9-12,13-16,17-20
-		-t,--level {1-20}			choose weapon level 1-20
+		-t,--tier {1-5}					choose weapon tier. 1,2,3,4,5 corresponds to levels 1-4,5-8,9-12,13-16,17-20
+		-t,--level {1-20}				choose weapon level 1-20
 	
 	tier and level are mutually exclusive
 
