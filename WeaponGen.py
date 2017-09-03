@@ -432,13 +432,17 @@ def main():
     
     #argument parser
     parser=argparse.ArgumentParser(prog = 'WeaponGen.py',description = 'Starfinder random weapon generator')
-    parser.add_argument('-t','--tier', type=int, choices=set((1, 2, 3, 4, 5)),dest='tier', help='choose weapon tier, tier 1 is levels 1-4, 2 is 5-8, etc.')
     parser.add_argument('-a','--armtype',choices=set(('smallarm', 'longarm', 'heavy', 'sniper')),dest='type', help = 'choose type of weapon')
+    levels = parser.add_mutually_exclusive_group()
+    levels.add_argument('-t','--tier', type=int, choices=set((1, 2, 3, 4, 5)),dest='tier', help='choose weapon tier, tier 1 is levels 1-4, 2 is 5-8, etc.')
+    levels.add_argument('-l','--level', type=int, choices=set(range(1, 21)),dest='level', help='choose weapon level 1-20')
+
     global results    
     results =  parser.parse_args()
     
     tier = results.tier
     type = results.type
+    level= results.level
     
     print ""
     spin="\|/-\|/-"
@@ -448,13 +452,16 @@ def main():
         sys.stdout.write('\b')
         time.sleep(0.1)
     
-    if tier is None:
-        level = str(randint(1,20))
-    elif tier == 1:level = str(randint(1,4))
-    elif tier == 2:level = str(randint(5,8))
-    elif tier == 3:level = str(randint(9,12))
-    elif tier == 4:level = str(randint(13,16))
-    elif tier == 5:level = str(randint(17,20))
+    if level is not None:
+        levelA = str(level)
+    elif level is None:    
+        if tier is None:
+            levelA = str(randint(1,20))
+        elif tier == 1:levelA = str(randint(1,4))
+        elif tier == 2:levelA = str(randint(5,8))
+        elif tier == 3:levelA = str(randint(9,12))
+        elif tier == 4:levelA = str(randint(13,16))
+        elif tier == 5:levelA = str(randint(17,20))
     
     if type is None: arm = random.choice([1,2,3,4])
     elif type == 'smallarm': arm = 1
@@ -462,10 +469,10 @@ def main():
     elif type == 'heavy': arm = 3
     elif type == 'sniper':arm = 4
     
-    if arm == 1: smallArm(level)
-    if arm == 2: longarm(level)
-    if arm == 3: heavy(level)
-    if arm == 4: sniper(level)
+    if arm == 1: smallArm(levelA)
+    if arm == 2: longarm(levelA)
+    if arm == 3: heavy(levelA)
+    if arm == 4: sniper(levelA)
         
 if __name__ == "__main__":
     main()    

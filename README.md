@@ -5,11 +5,14 @@ It's dirty and I'm not ashamed. But it works quite well and can add some add som
 
 ### Usage: 
 
-	WeaponGen.py [OPTIONS]
+	WeaponGen.py [ -h ] [ -a ] [ -t | -l ]
 	optional arguments:
-		-h,--help					show help
-		-t,--tier {1,2,3,4,5}				choose weapon tier. 1,2,3,4,5 corresponds to levels 1-4,5-8,9-12,13-16,17-20
 		-a,--armtype {heavy,smallarm,longarm,sniper}	choose weapon type
+		-h,--help					show help
+		-t,--tier {1-5}				choose weapon tier. 1,2,3,4,5 corresponds to levels 1-4,5-8,9-12,13-16,17-20
+		-t,--level {1-20}			choose weapon level 1-20
+	
+	tier and level are mutually exclusive
 
 	
 if you run WeaponGen.py with no arguments it will create a completely random weapon from any type or tier.
@@ -19,6 +22,8 @@ if you run WeaponGen.py with no arguments it will create a completely random wea
 I want to generate some loot for a level 2 party. I would run [ WeaponGen.py -t 1 ] to generate a level 1-4 weapon of a random type.
 
 My shop wants a new longarm for a level 14 character. I would run [ WeaponGen.py -t 4 -a longarm ] to get a longarm in the right tier
+
+I want to get a level 19 sniper rifle [ WeaponGen.py -l 19 -a sniper]
 
 ### Example outputs:
 
